@@ -9,7 +9,18 @@
     *ngFor="let m of markers; let i = index"
     [latitude]="m.lat"
     [longitude]="m.lng"
-    [label]="m.label"
-    [markerDraggable]="m.draggable">
+    [iconUrl]="icon">
   </agm-marker>
 </agm-map>
+
+<div class="rightPanel">
+  <div class="logo"></div>
+  <div class="menuRightPanel">
+    <ul class="ulMenu">
+      <li><a href="#">КЕЙСЫ</a></li>
+      <li><a href="#">ФОРМАТЫ</a></li>
+      <li><a class="active" href="#">ИЗДАТЕЛЯМ</a></li>
+      <li><a href="#">ПЛАТФОРМА</a></li>
+    </ul>
+  </div>
+</div>

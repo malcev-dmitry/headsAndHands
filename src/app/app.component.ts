@@ -9,13 +9,17 @@ import { data } from '../assets/data/data.js';
 })
 
 export class AppComponent implements OnInit {
+  private icon = {
+    url: require('../assets/icons/metroIcon.svg'),
+    scaledSize: {
+      height: 35,
+      width: 28.5
+    }
+  };
 
   constructor() {}
 
-  // google maps zoom level
   zoom = 12;
-
-  // initial center position for the map
   lat = 59.9434483211;
   lng = 30.3601813316;
 
