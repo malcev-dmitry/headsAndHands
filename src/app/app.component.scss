@@ -49,4 +49,77 @@ agm-map {
       }
     }
   }
+
+  .positionBlock {
+    position: absolute;
+    bottom: 18.2px;
+
+    .city {
+      height: 60px;
+      line-height: 12px;
+      font-size: 8px;
+      font-family: MullerMedium;
+      letter-spacing: 0.1px;
+      color: #4a4a4a;
+    }
+
+    .infoAdvertising {
+      margin-top: 36px;
+    }
+
+    .iconsSocialNetworks {
+      margin-top: 13.5px;
+      display: inline-flex;
+
+      .iconSize {
+        height: 13.3px;
+        padding: 0 23px 0 0;
+      }
+
+      img {
+        height: 13.3px;
+      }
+    }
+  }
+}
+@media screen and (min-width:320px) and (max-width:1024px) {
+  .rightPanel {
+    height:30%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    bottom: 0;
+
+    .logo {
+      width: 70px;
+      height: 10px;
+      background: url("./../assets/icons/group.svg");
+      background-size: cover;
+    }
+
+    .menuRightPanel {
+      font-family: MullerLight;
+
+      .ulMenu {
+        margin-top: 10px;
+        padding: 0;
+        line-height:16px;
+
+        li {
+          list-style-type: none;
+          font-size: 10.5px;
+
+          a {
+            text-decoration: none;
+            color: #000;
+          }
+          :hover {
+            font-family: MullerMedium;
+          }
+        }
+      }
+    }
+  }
 }

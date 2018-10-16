@@ -19,11 +19,21 @@ export class AppComponent implements OnInit {
 
   constructor() {}
 
+  markers: any;
+
   zoom = 12;
   lat = 59.9434483211;
   lng = 30.3601813316;
 
-  markers: any;
+  action = true;
+  memoryAction = 1;
+
+  activeInfo(numberCity) {
+    if (this.memoryAction !== numberCity) {
+      this.action = !this.action;
+      this.memoryAction = numberCity;
+    }
+  }
 
   ngOnInit() {
     this.markers = stations;
