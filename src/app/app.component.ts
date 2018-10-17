@@ -16,9 +16,14 @@ export class AppComponent implements OnInit {
 
   icon = iconsLocation;
 
+  moscovLat = 55.7094361;
+  moscovLng = 37.6546389;
+  piterLat = 59.910123;
+  piterLng = 30.2854809;
+
   zoom = 12;
-  lat = 55.7094361;
-  lng = 37.6546389;
+  lat = this.moscovLat;
+  lng = this.moscovLng;
 
   action = true;
   memoryAction = 1;
@@ -29,12 +34,12 @@ export class AppComponent implements OnInit {
       this.memoryAction = numberCity;
 
       if (numberCity === 1) {
-        this.lat = 55.7094361;
-        this.lng = 37.6546389;
+        this.lat = this.moscovLat;
+        this.lng = this.moscovLng;
       }
       if (numberCity === 2) {
-        this.lat = 59.910123;
-        this.lng = 30.2854809;
+        this.lat = this.piterLat;
+        this.lng = this.piterLng;
       }
     }
   }
