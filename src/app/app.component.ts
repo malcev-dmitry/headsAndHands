@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { stations } from '../assets/data/stations.js';
+import { iconsLocation } from '../assets/data/iconsLocation.js';
 
 @Component({
   selector: 'app-root',
@@ -9,47 +10,11 @@ import { stations } from '../assets/data/stations.js';
 
 export class AppComponent implements OnInit {
 
-  private icon = [
-    {
-      url: '../assets/icons/group.svg',
-      scaledSize: {
-        height: 48,
-        width: 120
-      }
-    },
-    {
-      url: '../assets/icons/star.svg',
-      scaledSize: {
-        height: 13.3,
-        width: 13.3
-      }
-    },
-    {
-      url: '../assets/icons/page.svg',
-      scaledSize: {
-        height: 13.3,
-        width: 13.3
-      }
-    },
-    {
-      url: '../assets/icons/starHPMD.png',
-      scaledSize: {
-        height: 48,
-        width: 120
-      }
-    },
-    {
-      url: '../assets/icons/pageHPMD.png',
-      scaledSize: {
-        height: 48,
-        width: 120
-      }
-    },
-  ];
-
   markers: any;
 
   constructor() {}
+
+  icon = iconsLocation;
 
   zoom = 12;
   lat = 55.7094361;
