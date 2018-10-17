@@ -61,6 +61,34 @@ agm-map {
       font-family: MullerMedium;
       letter-spacing: 0.1px;
       color: #4a4a4a;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: #0040ff;
+      }
+
+      .iconCity {
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        left: -31px;
+        top: 0;
+
+
+        img {
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      .tringle {
+        border: 20px solid transparent;
+        border-right: 20px solid #fff;
+        position: absolute;
+        left: -85px;
+        top: -15px;
+      }
     }
 
     .infoAdvertising {
@@ -82,7 +110,7 @@ agm-map {
     }
   }
 }
-@media screen and (min-width:320px) and (max-width:1024px) {
+@media screen and (min-width:320px) and (max-width:812px) {
   .rightPanel {
     height:30%;
     width: 100%;
@@ -91,6 +119,7 @@ agm-map {
     padding: 5px;
     box-sizing: border-box;
     bottom: 0;
+    overflow: auto;
 
     .logo {
       width: 70px;
@@ -109,7 +138,7 @@ agm-map {
 
         li {
           list-style-type: none;
-          font-size: 10.5px;
+          font-size: 7px;
 
           a {
             text-decoration: none;
@@ -118,6 +147,70 @@ agm-map {
           :hover {
             font-family: MullerMedium;
           }
+        }
+      }
+    }
+
+    .positionBlock {
+      position: absolute;
+      bottom: 0;
+      left: 100px;
+      display: inline-flex;
+      width: 100%;
+      height: 100%;
+      top: 5%;
+
+      .city {
+        height: 60px;
+        line-height: 12px;
+        font-size: 10px;
+        font-family: MullerMedium;
+        letter-spacing: 0.1px;
+        color: #4a4a4a;
+        bottom: 0;
+        padding-right: 30px;
+
+        a {
+          text-decoration: none;
+          color: #0040ff;
+        }
+
+        .iconCity {
+          width: 13px;
+          height: 13px;
+          position: absolute;
+          left: -20px;
+          top: 0;
+
+
+          img {
+            width: 13px;
+            height: 13px;
+          }
+        }
+
+        .tringle {
+          border: 0;
+          border-right: 0;
+        }
+      }
+
+      .infoAdvertising {
+        margin-top: 0;
+      }
+
+      .iconsSocialNetworks {
+        margin-top: 0;
+        display: block;
+
+        .iconSize {
+          height: 13.3px;
+          padding: 0 10px 0 0;
+          padding-top: 7px;
+        }
+
+        img {
+          height: 13.3px;
         }
       }
     }

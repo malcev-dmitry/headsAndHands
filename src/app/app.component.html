@@ -6,10 +6,17 @@
   [zoomControl]="false">
 
   <agm-marker
-    *ngFor="let m of markers; let i = index"
-    [latitude]="m.lat"
-    [longitude]="m.lng"
-    [iconUrl]="icon">
+    [latitude]="lat"
+    [longitude]="lng"
+    [iconUrl]="icon[memoryAction + 2]">
+    <agm-info-window>
+      <strong *ngIf="memoryAction === 1">
+        Москва, ул.Ленинская Слобода, 19
+      </strong>
+      <strong *ngIf="memoryAction === 2">
+        Санкт-Петебург, наб.Обводного канала 199
+      </strong>
+    </agm-info-window>
   </agm-marker>
 </agm-map>
 
@@ -28,21 +35,33 @@
 
   <div class="positionBlock">
     <div class="city" [ngStyle]="{'color':action ? '#000' : null }" (click)="activeInfo(1)">
-        <span>
-          Москва<br>
-          +7(495) 269 84 10<br>
-          ул.Ленинская Слобода, 19<br>
-          Бизнес-центр Омега плаза
-        </span>
+      <span>
+        Москва<br>
+        +7(495) 269 84 10<br>
+        ул.Ленинская Слобода, 19<br>
+        Бизнес-центр Омега плаза
+      </span>
+
+      <div class="iconCity">
+        <img src="../assets/icons/star.svg">
+      </div>
+
+      <div *ngIf="memoryAction === 1" class="tringle"></div>
     </div>
 
     <div class="city" [ngStyle]="{'color':!action ? '#000' : null }" (click)="activeInfo(2)">
-        <span>
-          Санкт-Петебург<br>
-          +7(812) 240 43 35<br>
-          196158, наб.Обводного канала 199,<br>
-          Обводный двор, офис 3 А
-        </span>
+      <span>
+        Санкт-Петебург<br>
+        +7(812) 240 43 35<br>
+        196158, наб.Обводного канала 199,<br>
+        Обводный двор, офис 3 А
+      </span>
+
+      <div class="iconCity">
+        <img src="../assets/icons/page.svg">
+      </div>
+
+      <div *ngIf="memoryAction === 2" class="tringle"></div>
     </div>
 
     <div class="infoAdvertising infoCity">
@@ -51,7 +70,7 @@
         Размещение рекламы:<br>
         +7 945 249-48-91<br>
         +7 966 009-30-65<br>
-        media@hpmdnetwork.ru
+        <a href="mailto:media@hpmdnetwork.ru">media@hpmdnetwork.ru</a>
       </span>
       </div>
       <div class="city">
@@ -59,7 +78,7 @@
         По вопросам подключения сайтов к сети<br>
         HPMD Network или использования<br>
         SSP HPMD Ads:<br>
-        media@hpmdnetwork.ru
+        <a href="mailto:media@hpmdnetwork.ru">media@hpmdnetwork.ru</a>
       </span>
       </div>
     </div>
