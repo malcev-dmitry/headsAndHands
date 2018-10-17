@@ -19,6 +19,7 @@ agm-map {
   right: 0;
   padding: 17.5px 0 18.2px 48.8px;
   box-sizing: border-box;
+  overflow: auto;
 
   .logo {
     width: 93.3px;
@@ -109,6 +110,11 @@ agm-map {
       }
     }
   }
+  @media (max-height:480px) {
+    .positionBlock {
+      position: relative;
+    }
+  }
 }
 @media screen and (min-width:320px) and (max-width:812px) {
   .rightPanel {
@@ -119,7 +125,6 @@ agm-map {
     padding: 5px;
     box-sizing: border-box;
     bottom: 0;
-    overflow: auto;
 
     .logo {
       width: 70px;
