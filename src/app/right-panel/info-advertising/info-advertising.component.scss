@@ -1,0 +1,8 @@
+.infoAdvertising {
+  margin-top: 36px;
+}
+@media screen and (min-width:320px) and (max-width:812px) {
+  .infoAdvertising {
+    margin-top: 0;
+  }
+}

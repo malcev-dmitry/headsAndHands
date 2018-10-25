@@ -13,4 +13,57 @@ html, body {
   padding:0;
   width:100%;
   height:100%;
+
+  .city {
+    height: 60px;
+    line-height: 12px;
+    font-size: 8px;
+    font-family: MullerMedium;
+    letter-spacing: 0.1px;
+    color: #4a4a4a;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: #0040ff;
+    }
+
+    .iconCity {
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      left: -31px;
+      top: 0;
+
+      img {
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    .tringle {
+      border: 20px solid transparent;
+      border-right: 20px solid #fff;
+      position: absolute;
+      left: -85px;
+      top: -15px;
+    }
+  }
+  @media screen and (min-width:320px) and (max-width:812px) {
+    .city {
+      font-size: 10px;
+      letter-spacing: 0.1px;
+      color: #4a4a4a;
+      bottom: 0;
+      padding-right: 30px;
+
+      .iconCity {
+        left: -20px;
+      }
+
+      .tringle {
+        border: 0;
+      }
+    }
+  }
 }
