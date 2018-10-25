@@ -2,15 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
+import { RightPanelComponent } from './right-panel/right-panel.component';
+import { MapComponent } from './map/map.component';
+import { MenuRightPanelComponent } from './right-panel/menu-right-panel/menu-right-panel.component';
+import { IconsSocialNetworksComponent } from './right-panel/icons-social-networks/icons-social-networks.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RightPanelComponent,
+    MapComponent,
+    MenuRightPanelComponent,
+    IconsSocialNetworksComponent
   ],
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAV9K407CU2MmhhSLzQKan-biJH8s9_mXE'
+      apiKey: 'AIzaSyDO-tKm2LntlEevZFhn9KTyjn3JqaHtYbc'
     })
   ],
   providers: [],

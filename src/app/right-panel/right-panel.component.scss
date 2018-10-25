@@ -1,0 +1,144 @@
+agm-marker {
+  width: 28px;
+  height: 35px;
+}
+
+.rightPanel {
+  height:100%;
+  width: 369px;
+  position: absolute;
+  background: #fff;
+  right: 0;
+  padding: 17.5px 0 18.2px 48.8px;
+  box-sizing: border-box;
+
+  .logo {
+    width: 93.3px;
+    height: 13.3px;
+    background: url("./../../assets/icons/group.svg");
+    background-size: cover;
+  }
+
+  .positionBlock {
+    position: absolute;
+    bottom: 18.2px;
+
+    .city {
+      height: 60px;
+      line-height: 12px;
+      font-size: 8px;
+      font-family: MullerMedium;
+      letter-spacing: 0.1px;
+      color: #4a4a4a;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: #0040ff;
+      }
+
+      .iconCity {
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        left: -31px;
+        top: 0;
+
+
+        img {
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      .tringle {
+        border: 20px solid transparent;
+        border-right: 20px solid #fff;
+        position: absolute;
+        left: -85px;
+        top: -15px;
+      }
+    }
+
+    .infoAdvertising {
+      margin-top: 36px;
+    }
+  }
+  @media (max-height:480px) {
+    .positionBlock {
+      position: relative;
+    }
+  }
+}
+@media screen and (min-width:320px) and (max-width:812px) {
+  .rightPanel {
+    height:30%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    bottom: 0;
+    overflow: auto;
+
+    .logo {
+      width: 70px;
+      height: 10px;
+      background: url("./../../assets/icons/group.svg");
+      background-size: cover;
+    }
+
+    .positionBlock {
+      position: absolute;
+      bottom: 0;
+      left: 100px;
+      display: inline-flex;
+      width: 100%;
+      height: 100%;
+      top: 5%;
+
+      .city {
+        height: 60px;
+        line-height: 12px;
+        font-size: 10px;
+        font-family: MullerMedium;
+        letter-spacing: 0.1px;
+        color: #4a4a4a;
+        bottom: 0;
+        padding-right: 30px;
+
+        a {
+          text-decoration: none;
+          color: #0040ff;
+        }
+
+        .iconCity {
+          width: 13px;
+          height: 13px;
+          position: absolute;
+          left: -20px;
+          top: 0;
+
+
+          img {
+            width: 13px;
+            height: 13px;
+          }
+        }
+
+        .tringle {
+          border: 0;
+        }
+      }
+
+      .infoAdvertising {
+        margin-top: 0;
+      }
+    }
+  }
+}
+@media (max-height:480px) {
+  .rightPanel {
+    overflow: auto;
+  }
+}

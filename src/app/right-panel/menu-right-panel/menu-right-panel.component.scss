@@ -1,0 +1,35 @@
+.menuRightPanel {
+  font-family: MullerLight;
+
+  .ulMenu {
+    margin-top: 31px;
+    padding:0;
+    line-height:24px;
+
+    li {
+      list-style-type: none;
+      font-size: 10.5px;
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      :hover {
+        font-family: MullerMedium;
+      }
+    }
+  }
+}
+@media screen and (min-width:320px) and (max-width:812px) {
+  .menuRightPanel {
+
+    .ulMenu {
+      margin-top: 10px;
+      line-height: 16px;
+
+      li {
+        font-size: 7px;
+      }
+    }
+  }
+}

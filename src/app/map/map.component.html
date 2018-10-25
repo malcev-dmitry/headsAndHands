@@ -1,0 +1,21 @@
+<agm-map
+  [latitude]="latGet"
+  [longitude]="lngGet"
+  [zoom]="12"
+  [disableDefaultUI]="false"
+  [zoomControl]="false">
+
+  <agm-marker
+    [latitude]="latGet"
+    [longitude]="lngGet"
+    [iconUrl]="icon[memoryActionGet + 2]">
+    <agm-info-window>
+      <strong *ngIf="memoryActionGet === 1">
+        Москва, ул.Ленинская Слобода, 19
+      </strong>
+      <strong *ngIf="memoryActionGet === 2">
+        Санкт-Петебург, наб.Обводного канала 199
+      </strong>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>

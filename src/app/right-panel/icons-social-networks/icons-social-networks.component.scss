@@ -1,0 +1,23 @@
+.iconsSocialNetworks {
+  margin-top: 13.5px;
+  display: inline-flex;
+
+  .iconSize {
+    height: 13.3px;
+    padding: 0 23px 0 0;
+  }
+
+  img {
+    height: 13.3px;
+  }
+}
+@media screen and (min-width:320px) and (max-width:812px) {
+  .iconsSocialNetworks {
+    margin-top: 0;
+    display: block;
+
+    .iconSize {
+      padding: 7px 10px 0 0;
+    }
+  }
+}
