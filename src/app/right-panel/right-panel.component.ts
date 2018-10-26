@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { contentCity } from '../../assets/data/contentCity.js';
 
 @Component({
   selector: 'app-right-panel',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class RightPanelComponent implements OnInit {
   constructor() {}
+
+  getContentCity: any;
 
   moscovLat = 55.7094361;
   moscovLng = 37.6546389;
@@ -35,5 +38,7 @@ export class RightPanelComponent implements OnInit {
       }
     }
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.getContentCity = contentCity;
+  }
 }

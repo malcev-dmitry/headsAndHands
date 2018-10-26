@@ -1,0 +1,9 @@
+<div class="city" [ngStyle]="{'color':colorTextCity ? '#000' : null }">
+  <span [innerHTML]="contentCity"></span>
+
+  <div class="iconCity">
+    <img src={{iconLocationCity}}>
+  </div>
+
+  <div *ngIf="colorTextCity" class="tringle"></div>
+</div>

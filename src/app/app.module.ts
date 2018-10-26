@@ -7,6 +7,7 @@ import { MapComponent } from './map/map.component';
 import { MenuRightPanelComponent } from './right-panel/menu-right-panel/menu-right-panel.component';
 import { IconsSocialNetworksComponent } from './right-panel/icons-social-networks/icons-social-networks.component';
 import { InfoAdvertisingComponent } from './right-panel/info-advertising/info-advertising.component';
+import { CityComponent } from './right-panel/city/city.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InfoAdvertisingComponent } from './right-panel/info-advertising/info-ad
     MapComponent,
     MenuRightPanelComponent,
     IconsSocialNetworksComponent,
-    InfoAdvertisingComponent
+    InfoAdvertisingComponent,
+    CityComponent
   ],
   imports: [
     BrowserModule,

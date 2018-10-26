@@ -3,35 +3,26 @@
   <div class="logo"></div>
   <app-menu-right-panel></app-menu-right-panel>
   <div class="positionBlock">
-    <div class="city" [ngStyle]="{'color':action ? '#000' : null }" (click)="activeInfo(1)">
-        <span>
-          Москва<br>
-          +7(495) 269 84 10<br>
-          ул.Ленинская Слобода, 19<br>
-          Бизнес-центр Омега плаза
-        </span>
 
-      <div class="iconCity">
-        <img src="../assets/icons/star.svg">
-      </div>
+    <app-city
+      [iconLocationCity]="'../assets/icons/metroMapIcon.svg'"
+      [contentCity]="getContentCity[0].value">
+    </app-city>
 
-      <div *ngIf="memoryAction === 1" class="tringle"></div>
-    </div>
+    <app-city
+      [iconLocationCity]="'../assets/icons/star.svg'"
+      [contentCity]="getContentCity[1].value"
+      [colorTextCity]="action"
+      (click)="activeInfo(1)">
+    </app-city>
 
-    <div class="city" [ngStyle]="{'color':!action ? '#000' : null }" (click)="activeInfo(2)">
-        <span>
-          Санкт-Петебург<br>
-          +7(812) 240 43 35<br>
-          196158, наб.Обводного канала 199,<br>
-          Обводный двор, офис 3 А
-        </span>
+    <app-city
+      [iconLocationCity]="'../assets/icons/page.svg'"
+      [contentCity]="getContentCity[2].value"
+      [colorTextCity]="!action"
+      (click)="activeInfo(2)">
+    </app-city>
 
-      <div class="iconCity">
-        <img src="../assets/icons/page.svg">
-      </div>
-
-      <div *ngIf="memoryAction === 2" class="tringle"></div>
-    </div>
     <app-info-advertising></app-info-advertising>
 
     <app-icons-social-networks></app-icons-social-networks>
