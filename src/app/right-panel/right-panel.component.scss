@@ -13,17 +13,28 @@ agm-marker {
   box-sizing: border-box;
 
   .logo {
-    width: 93.3px;
-    height: 13.3px;
-    background: url("./../../assets/icons/group.svg");
-    background-size: cover;
+    width: 369px;
+    height: 48px;
+    box-shadow: 0 0.5px 5.5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      width: 93.3px;
+      height: 13.3px;
+      position: absolute;
+      top: 17px;
+      left: 49px;
+    }
   }
 
   .positionBlock {
     position: absolute;
     bottom: 18.2px;
   }
-  @media (max-height:480px) {
+  @media (max-height:600px) {
     .positionBlock {
       position: relative;
     }
@@ -43,8 +54,16 @@ agm-marker {
     .logo {
       width: 70px;
       height: 10px;
-      background: url("./../../assets/icons/group.svg");
-      background-size: cover;
+      top: 10px;
+      left: 0;
+      box-shadow: none;
+
+      img {
+        width: 70px;
+        height: 10px;
+        top: 0;
+        left: 5px;
+      }
     }
 
     .positionBlock {

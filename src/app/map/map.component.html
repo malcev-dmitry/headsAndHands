@@ -1,21 +1,38 @@
-<agm-map
-  [latitude]="latGet"
-  [longitude]="lngGet"
-  [zoom]="12"
-  [disableDefaultUI]="false"
-  [zoomControl]="false">
-
-  <agm-marker
+<div *ngIf="memoryActionGet !== 3">
+  <agm-map
     [latitude]="latGet"
     [longitude]="lngGet"
-    [iconUrl]="icon[memoryActionGet + 2]">
-    <agm-info-window>
-      <strong *ngIf="memoryActionGet === 1">
-        Москва, ул.Ленинская Слобода, 19
-      </strong>
-      <strong *ngIf="memoryActionGet === 2">
-        Санкт-Петебург, наб.Обводного канала 199
-      </strong>
-    </agm-info-window>
-  </agm-marker>
-</agm-map>
+    [zoom]="12"
+    [disableDefaultUI]="false"
+    [zoomControl]="false">
+
+    <agm-marker
+      [latitude]="latGet"
+      [longitude]="lngGet"
+      [iconUrl]="icon[memoryActionGet + 2]">
+      <agm-info-window>
+        <strong *ngIf="memoryActionGet === 1">
+          Москва, ул.Ленинская Слобода, 19
+        </strong>
+        <strong *ngIf="memoryActionGet === 2">
+          Санкт-Петебург, наб.Обводного канала 199
+        </strong>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>
+
+<div *ngIf="memoryActionGet === 3">
+  <agm-map
+    [latitude]="59.910123"
+    [longitude]="30.2854809"
+    [zoom]="10">
+
+    <agm-marker
+      *ngFor="let m of markers; let i = index"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [iconUrl]="icon[memoryActionGet + 2]">
+    </agm-marker>
+  </agm-map>
+</div>

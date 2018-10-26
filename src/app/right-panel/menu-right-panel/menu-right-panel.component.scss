@@ -1,5 +1,6 @@
 .menuRightPanel {
   font-family: MullerLight;
+  margin-top: 48px;
 
   .ulMenu {
     margin-top: 31px;
@@ -22,6 +23,7 @@
 }
 @media screen and (min-width:320px) and (max-width:812px) {
   .menuRightPanel {
+    margin-top: 20px;
 
     .ulMenu {
       margin-top: 10px;

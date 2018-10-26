@@ -28,6 +28,10 @@ export class RightPanelComponent implements OnInit {
       this.action = !this.action;
       this.memoryAction = numberCity;
 
+      if (numberCity === 3) {
+        this.lat = this.piterLat;
+        this.lng = this.piterLng;
+      }
       if (numberCity === 1) {
         this.lat = this.moscovLat;
         this.lng = this.moscovLng;

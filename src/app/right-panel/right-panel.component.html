@@ -1,30 +1,44 @@
 <app-map [latGet]="lat" [lngGet]="lng" [memoryActionGet]="memoryAction"></app-map>
+
 <div class="rightPanel">
-  <div class="logo"></div>
-  <app-menu-right-panel></app-menu-right-panel>
-  <div class="positionBlock">
 
-    <app-city
-      [iconLocationCity]="'../assets/icons/metroMapIcon.svg'"
-      [contentCity]="getContentCity[0].value">
-    </app-city>
+  <div class="logo">
+    <img src="./../../assets/icons/group.svg">
+  </div>
 
-    <app-city
-      [iconLocationCity]="'../assets/icons/star.svg'"
-      [contentCity]="getContentCity[1].value"
-      [colorTextCity]="action"
-      (click)="activeInfo(1)">
-    </app-city>
+  <div *ngIf="memoryAction !== 3">
 
-    <app-city
-      [iconLocationCity]="'../assets/icons/page.svg'"
-      [contentCity]="getContentCity[2].value"
-      [colorTextCity]="!action"
-      (click)="activeInfo(2)">
-    </app-city>
+    <app-menu-right-panel></app-menu-right-panel>
 
-    <app-info-advertising></app-info-advertising>
+    <div class="positionBlock">
 
-    <app-icons-social-networks></app-icons-social-networks>
+      <app-city
+        [iconLocationCity]="'../assets/icons/metroMapIcon.svg'"
+        [contentCity]="getContentCity[0].value"
+        (click)="activeInfo(3)">
+      </app-city>
+
+      <app-city
+        [iconLocationCity]="'../assets/icons/star.svg'"
+        [contentCity]="getContentCity[1].value"
+        [colorTextCity]="action"
+        (click)="activeInfo(1)">
+      </app-city>
+
+      <app-city
+        [iconLocationCity]="'../assets/icons/page.svg'"
+        [contentCity]="getContentCity[2].value"
+        [colorTextCity]="!action"
+        (click)="activeInfo(2)">
+      </app-city>
+
+      <app-info-advertising></app-info-advertising>
+
+      <app-icons-social-networks></app-icons-social-networks>
+    </div>
+  </div>
+
+  <div *ngIf="memoryAction === 0">
+    Hello
   </div>
 </div>
