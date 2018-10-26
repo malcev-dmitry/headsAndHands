@@ -8,7 +8,7 @@
 
   <div *ngIf="memoryAction !== 3">
 
-    <app-menu-right-panel></app-menu-right-panel>
+    <app-menu-right-panel [typeMenu]="'mainMenu'"></app-menu-right-panel>
 
     <div class="positionBlock">
 
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div *ngIf="memoryAction === 0">
-    Hello
+  <div *ngIf="memoryAction === 3">
+    <app-menu-right-panel [typeMenu]="'metroMenu'" (typeMenuGet)="typeMenuGet($event)"></app-menu-right-panel>
   </div>
 </div>

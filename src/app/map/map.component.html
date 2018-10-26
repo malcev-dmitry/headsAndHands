@@ -2,9 +2,20 @@
   <agm-map
     [latitude]="latGet"
     [longitude]="lngGet"
-    [zoom]="12"
-    [disableDefaultUI]="false"
-    [zoomControl]="false">
+    [zoom]="13">
+
+    <agm-circle
+      [latitude]="latGet"
+      [longitude]="lngGet"
+      [radius]="10000"
+      [fillColor]="'#000'"
+    ></agm-circle>
+    <agm-circle
+      [latitude]="latGet"
+      [longitude]="lngGet"
+      [radius]="10000"
+      [fillColor]="'#000'"
+    ></agm-circle>
 
     <agm-marker
       [latitude]="latGet"
@@ -26,7 +37,20 @@
   <agm-map
     [latitude]="59.910123"
     [longitude]="30.2854809"
-    [zoom]="10">
+    [zoom]="13">
+
+    <agm-circle
+      [latitude]="59.910123"
+      [longitude]="30.2854809"
+      [radius]="100000"
+      [fillColor]="'#000'"
+    ></agm-circle>
+    <agm-circle
+      [latitude]="59.910123"
+      [longitude]="30.2854809"
+      [radius]="100000"
+      [fillColor]="'#000'"
+    ></agm-circle>
 
     <agm-marker
       *ngFor="let m of markers; let i = index"

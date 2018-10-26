@@ -23,20 +23,27 @@ export class RightPanelComponent implements OnInit {
   action = true;
   memoryAction = 1;
 
+  typeMenuGet(value) {
+    this.memoryAction = value;
+    this.lat = this.moscovLat;
+    this.lng = this.moscovLng;
+    this.action = true;
+  }
+
   activeInfo(numberCity) {
     if (this.memoryAction !== numberCity) {
       this.action = !this.action;
       this.memoryAction = numberCity;
 
-      if (numberCity === 3) {
-        this.lat = this.piterLat;
-        this.lng = this.piterLng;
-      }
       if (numberCity === 1) {
         this.lat = this.moscovLat;
         this.lng = this.moscovLng;
       }
       if (numberCity === 2) {
+        this.lat = this.piterLat;
+        this.lng = this.piterLng;
+      }
+      if (numberCity === 3) {
         this.lat = this.piterLat;
         this.lng = this.piterLng;
       }

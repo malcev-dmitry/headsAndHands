@@ -1,8 +1,12 @@
 <div class="menuRightPanel">
-  <ul class="ulMenu">
+  <ul *ngIf="typeMenu === 'mainMenu'" class="ulMenu">
     <li><a href="#">КЕЙСЫ</a></li>
     <li><a href="#">ФОРМАТЫ</a></li>
     <li><a href="#">ИЗДАТЕЛЯМ</a></li>
     <li><a href="#">ПЛАТФОРМА</a></li>
+  </ul>
+
+  <ul *ngIf="typeMenu === 'metroMenu'" class="ulMenu">
+    <li><a href="#" (click)="onTypeMenuChange()">ГЛАВНАЯ СТРАНИЦА</a></li>
   </ul>
 </div>

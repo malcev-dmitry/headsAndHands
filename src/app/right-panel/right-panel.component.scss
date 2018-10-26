@@ -34,7 +34,11 @@ agm-marker {
     position: absolute;
     bottom: 18.2px;
   }
-  @media (max-height:600px) {
+  @media (max-height:550px) {
+    .logo {
+      width: 355px;
+    }
+
     .positionBlock {
       position: relative;
     }
@@ -77,7 +81,7 @@ agm-marker {
     }
   }
 }
-@media (max-height:480px) {
+@media (max-height:550px) {
   .rightPanel {
     overflow: auto;
   }
