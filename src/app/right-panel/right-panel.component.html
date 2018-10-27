@@ -6,7 +6,7 @@
     <img src="./../../assets/icons/group.svg">
   </div>
 
-  <div *ngIf="memoryAction !== 3">
+  <div class="rightPanelMain" *ngIf="memoryAction !== 3">
 
     <app-menu-right-panel [typeMenu]="'mainMenu'"></app-menu-right-panel>
 
@@ -40,5 +40,14 @@
 
   <div *ngIf="memoryAction === 3">
     <app-menu-right-panel [typeMenu]="'metroMenu'" (typeMenuGet)="typeMenuGet($event)"></app-menu-right-panel>
+    <div class="positionBlockMetro">
+      <div class="getStationsName" *ngFor="let station of getStationsName; let i = index">
+        <div class="iconMetroMenu">
+          <img src='../../assets/icons/metroColor.svg'>
+        </div>
+        {{station}}
+        <div class="getStations">{{getStations[i]}}</div>
+      </div>
+    </div>
   </div>
 </div>

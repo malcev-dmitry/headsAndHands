@@ -1,15 +1,15 @@
 .menuRightPanel {
   font-family: MullerLight;
-  margin-top: 48px;
+  margin-top: 0;
 
   .ulMenu {
-    margin-top: 31px;
     padding:0;
     line-height:24px;
+    margin: 0 0 20px 49px;
 
     li {
       list-style-type: none;
-      font-size: 10.5px;
+      font-size: 11px;
 
       a {
         text-decoration: none;
@@ -20,13 +20,17 @@
       }
     }
   }
+
+  .ulMetroMenu {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-width:320px) and (max-width:812px) {
   .menuRightPanel {
     margin-top: 20px;
 
     .ulMenu {
-      margin-top: 10px;
+      margin: 0 0 0 10px;
       line-height: 16px;
 
       li {

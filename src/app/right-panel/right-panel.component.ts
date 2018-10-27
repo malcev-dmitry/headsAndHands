@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { contentCity } from '../../assets/data/contentCity.js';
+import { stations } from '../../assets/data/stations.js';
 
 @Component({
   selector: 'app-right-panel',
@@ -11,6 +12,8 @@ export class RightPanelComponent implements OnInit {
   constructor() {}
 
   getContentCity: any;
+  getStationsName = [];
+  getStations = [];
 
   moscovLat = 55.7094361;
   moscovLng = 37.6546389;
@@ -51,5 +54,9 @@ export class RightPanelComponent implements OnInit {
   }
   ngOnInit() {
     this.getContentCity = contentCity;
+    for (let i = 0; i < stations.length; i++) {
+      this.getStationsName[i] = stations[i].name.split(' (')[0];
+      this.getStations[i] = stations[i].name.split('» ')[1];
+    }
   }
 }
