@@ -1,8 +1,3 @@
-agm-marker {
-  width: 28px;
-  height: 35px;
-}
-
 .rightPanel {
   height:100%;
   width: 369px;
@@ -33,7 +28,6 @@ agm-marker {
   .rightPanelMain {
     position: absolute;
     bottom: 18.2px;
-    overflow-y: auto;
     width: 300px;
     height: calc(100% - 110px);
   }
@@ -166,5 +160,10 @@ agm-marker {
         font-size: 8px;
       }
     }
+  }
+}
+@media (max-height:560px) {
+  .rightPanelMain {
+    overflow-y: auto;
   }
 }

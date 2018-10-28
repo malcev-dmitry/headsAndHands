@@ -24,19 +24,16 @@ export class RightPanelComponent implements OnInit {
   lat = this.moscovLat;
   lng = this.moscovLng;
 
-  action = true;
   memoryAction = 1;
 
   typeMenuGet(value) {
     this.memoryAction = value;
     this.lat = this.moscovLat;
     this.lng = this.moscovLng;
-    this.action = true;
   }
 
   activeInfo(numberCity) {
     if (this.memoryAction !== numberCity) {
-      this.action = !this.action;
       this.memoryAction = numberCity;
 
       if (numberCity === 1) {

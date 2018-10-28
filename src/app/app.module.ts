@@ -8,6 +8,7 @@ import { MenuRightPanelComponent } from './right-panel/menu-right-panel/menu-rig
 import { IconsSocialNetworksComponent } from './right-panel/icons-social-networks/icons-social-networks.component';
 import { InfoAdvertisingComponent } from './right-panel/info-advertising/info-advertising.component';
 import { CityComponent } from './right-panel/city/city.component';
+import { TringleComponent } from './right-panel/city/tringle/tringle.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CityComponent } from './right-panel/city/city.component';
     MenuRightPanelComponent,
     IconsSocialNetworksComponent,
     InfoAdvertisingComponent,
-    CityComponent
+    CityComponent,
+    TringleComponent
   ],
   imports: [
     BrowserModule,

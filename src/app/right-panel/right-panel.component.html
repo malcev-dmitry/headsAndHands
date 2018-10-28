@@ -15,20 +15,23 @@
       <app-city
         [iconLocationCity]="'../assets/icons/metroMapIcon.svg'"
         [contentCity]="getContentCity[0].value"
+        [idCity]="3"
         (click)="activeInfo(3)">
       </app-city>
 
       <app-city
         [iconLocationCity]="'../assets/icons/star.svg'"
         [contentCity]="getContentCity[1].value"
-        [colorTextCity]="action"
+        [idCity]="1"
+        [activeIdCity]="memoryAction"
         (click)="activeInfo(1)">
       </app-city>
 
       <app-city
         [iconLocationCity]="'../assets/icons/page.svg'"
         [contentCity]="getContentCity[2].value"
-        [colorTextCity]="!action"
+        [idCity]="2"
+        [activeIdCity]="memoryAction"
         (click)="activeInfo(2)">
       </app-city>
 

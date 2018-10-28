@@ -8,7 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CityComponent implements OnInit {
   @Input() iconLocationCity;
   @Input() contentCity;
-  @Input() colorTextCity;
+  @Input() idCity;
+  @Input() activeIdCity;
 
   constructor() { }
 
