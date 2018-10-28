@@ -12,6 +12,7 @@ export class RightPanelComponent implements OnInit {
   constructor() {}
 
   getContentCity: any;
+  IdOpen: any;
   getStationsName = [];
   getStations = [];
 
@@ -52,6 +53,11 @@ export class RightPanelComponent implements OnInit {
       }
     }
   }
+
+  getIdOpen(i) {
+    this.IdOpen = i;
+  }
+
   ngOnInit() {
     this.getContentCity = contentCity;
     for (let i = 0; i < stations.length; i++) {

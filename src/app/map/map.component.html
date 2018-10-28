@@ -4,13 +4,7 @@
     [longitude]="lngGet"
     [zoom]="13">
 
-    <agm-circle
-      [latitude]="latGet"
-      [longitude]="lngGet"
-      [radius]="10000"
-      [fillColor]="'#000'"
-    ></agm-circle>
-    <agm-circle
+    <agm-circle *ngFor="let m of [1, 2, 3]; let i = index"
       [latitude]="latGet"
       [longitude]="lngGet"
       [radius]="10000"
@@ -39,13 +33,7 @@
     [longitude]="30.2854809"
     [zoom]="11">
 
-    <agm-circle
-      [latitude]="59.910123"
-      [longitude]="30.2854809"
-      [radius]="100000"
-      [fillColor]="'#000'"
-    ></agm-circle>
-    <agm-circle
+    <agm-circle *ngFor="let m of [1, 2, 3]; let i = index"
       [latitude]="59.910123"
       [longitude]="30.2854809"
       [radius]="100000"
@@ -57,6 +45,13 @@
       [latitude]="m.lat"
       [longitude]="m.lng"
       [iconUrl]="icon[memoryActionGet + 2]">
+
+      <agm-info-window [isOpen]="getActiveOpen(i)">
+        <strong>
+          {{m.name}}
+        </strong>
+      </agm-info-window>
+
     </agm-marker>
   </agm-map>
 </div>

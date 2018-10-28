@@ -1,4 +1,4 @@
-<app-map [latGet]="lat" [lngGet]="lng" [memoryActionGet]="memoryAction"></app-map>
+<app-map [latGet]="lat" [lngGet]="lng" [memoryActionGet]="memoryAction" [idOpen]="IdOpen"></app-map>
 
 <div class="rightPanel">
 
@@ -41,7 +41,7 @@
   <div *ngIf="memoryAction === 3">
     <app-menu-right-panel [typeMenu]="'metroMenu'" (typeMenuGet)="typeMenuGet($event)"></app-menu-right-panel>
     <div class="positionBlockMetro">
-      <div class="getStationsName" *ngFor="let station of getStationsName; let i = index">
+      <div class="getStationsName" *ngFor="let station of getStationsName; let i = index" (click)="getIdOpen(i)">
         <div class="iconMetroMenu">
           <img src='../../assets/icons/metroColor.svg'>
         </div>

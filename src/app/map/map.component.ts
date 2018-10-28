@@ -10,10 +10,18 @@ import { iconsLocation } from '../../assets/data/iconsLocation.js';
 export class MapComponent implements OnInit {
   @Input() latGet;
   @Input() lngGet;
+  @Input() idOpen;
   @Input() memoryActionGet;
   markers: any;
   constructor() { }
   icon = iconsLocation;
+
+  getActiveOpen(i) {
+    if (i !== this.idOpen) {
+      return false;
+    }
+    return true;
+  }
 
   ngOnInit() {
     this.markers = stations;
