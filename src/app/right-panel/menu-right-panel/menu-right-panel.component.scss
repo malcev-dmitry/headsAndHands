@@ -39,3 +39,21 @@
     }
   }
 }
+@media screen and (min-width:480px) and (max-width:812px) and (min-height: 320px) and (max-height: 768px) {
+  .menuRightPanel {
+    margin-top: 20px;
+
+    .ulMenu {
+      margin: 0 0 0 30px;
+      line-height: 16px;
+
+      li {
+        font-size: 7px;
+      }
+    }
+
+    .ulMetroMenu {
+      margin: 30px 0 0 30px;
+    }
+  }
+}
