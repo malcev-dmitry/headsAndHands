@@ -9,6 +9,7 @@ import { IconsSocialNetworksComponent } from './right-panel/icons-social-network
 import { InfoAdvertisingComponent } from './right-panel/info-advertising/info-advertising.component';
 import { CityComponent } from './right-panel/city/city.component';
 import { TringleComponent } from './right-panel/city/tringle/tringle.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TringleComponent } from './right-panel/city/tringle/tringle.component';
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDO-tKm2LntlEevZFhn9KTyjn3JqaHtYbc'
-    })
+    }),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -41,4 +41,11 @@ export var iconsLocation = [
       width: 35
     }
   },
+  {
+    url: '../assets/icons/metroIcon.svg',
+    scaledSize: {
+      height: 100,
+      width: 130
+    }
+  },
 ];

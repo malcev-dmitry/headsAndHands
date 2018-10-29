@@ -44,14 +44,23 @@
       *ngFor="let m of markers; let i = index"
       [latitude]="m.lat"
       [longitude]="m.lng"
-      [iconUrl]="icon[memoryActionGet + 2]">
+      [iconUrl]="icon[memoryActionGet + sizeIconMetro(i)]"
+      (markerClick)="sizeIconMetro(i)"
+    >
 
-      <agm-info-window [isOpen]="getActiveOpen(i)">
-        <strong>
+      <agm-info-window [isOpen]="getIdOpen(i)">
+        <div class="widthName">
           {{m.name}}
-        </strong>
+        </div>
+        <canvas
+          baseChart
+          [datasets]="getData(m.id)"
+          [labels]="time"
+          [chartType]="'bar'"
+          [width]="300"
+          [colors]="lineChartColors"
+        ></canvas>
       </agm-info-window>
-
     </agm-marker>
   </agm-map>
 </div>
