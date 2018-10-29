@@ -1,7 +1,8 @@
 import { Input, Component, OnInit } from '@angular/core';
-import { data } from '../../assets/data/data.js';
 import { stations } from '../../assets/data/stations.js';
 import { iconsLocation } from '../../assets/data/iconsLocation.js';
+import { GetSortedDataService } from '../service/get-sorted-data.service.ts';
+import { data } from '../../assets/data/data.js';
 import * as _ from 'lodash';
 
 @Component({
@@ -22,11 +23,11 @@ export class MapComponent implements OnInit {
     }];
 
   markers: any;
-  constructor() {}
+  constructor(private getData: GetSortedDataService) {}
   icon = iconsLocation;
-  time: string[] = [];
-  getData: (id: string) => any = _.memoize(this.getSortedData);
+  getData: (id: string) => any = _.memoize(this.getData.getSortedData);
   sizeIcon = 2;
+  time: string[] = [];
 
   sizeIconMetro(i) {
     if (i === this.idOpen) {
@@ -45,17 +46,6 @@ export class MapComponent implements OnInit {
     if (i === this.idOpen) {
       return true;
     }
-  }
-
-  getSortedData(id: string): any[] {
-    const stationCheckins = [];
-    for (let i = 0; i < (data.checkins_timestamps).length; i++) {
-      const sortedData = data.checkins_timestamps[i].stations_checkins_count.find((item) => item.id_station === id);
-      if (!!sortedData) {
-        stationCheckins.push(sortedData.count);
-      }
-    }
-    return [{data: stationCheckins, label: 'Количество кликов за период времени'}];
   }
 
   getTime() {
