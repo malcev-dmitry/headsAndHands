@@ -11,7 +11,7 @@ import { stations } from '../../assets/data/stations.js';
 export class RightPanelComponent implements OnInit {
   constructor() {}
 
-  getContentCity: any;
+  getContentCity: object;
   IdOpen: number;
   getStationsName: string[] = [];
   getStations: string[] = [];
