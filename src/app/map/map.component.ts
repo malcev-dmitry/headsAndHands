@@ -22,11 +22,11 @@ export class MapComponent implements OnInit {
       borderColor: 'rgba(69,153,139,1)'
     }];
 
-  markers: any;
+  markers: object;
 
   constructor(private getSortedData: GetSortedDataService) {}
 
-  icon = iconsLocation;
+  icon: object = iconsLocation;
   getData: (id: string) => any = _.memoize(this.getSortedData.getSortedData);
   sizeIcon: number = 2;
   time: string[] = [];

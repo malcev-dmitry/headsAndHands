@@ -12,27 +12,27 @@ export class RightPanelComponent implements OnInit {
   constructor() {}
 
   getContentCity: any;
-  IdOpen: any;
-  getStationsName = [];
-  getStations = [];
+  IdOpen: number;
+  getStationsName: string[] = [];
+  getStations: string[] = [];
 
-  moscovLat = 55.7094361;
-  moscovLng = 37.6546389;
-  piterLat = 59.910123;
-  piterLng = 30.2854809;
+  moscovLat: number = 55.7094361;
+  moscovLng: number = 37.6546389;
+  piterLat: number = 59.910123;
+  piterLng: number = 30.2854809;
 
-  lat = this.moscovLat;
-  lng = this.moscovLng;
+  lat: number = this.moscovLat;
+  lng: number = this.moscovLng;
 
-  memoryAction = 1;
+  memoryAction: number = 1;
 
-  typeMenuGet(value) {
+  typeMenuGet(value: number) {
     this.memoryAction = value;
     this.lat = this.moscovLat;
     this.lng = this.moscovLng;
   }
 
-  activeInfo(numberCity) {
+  activeInfo(numberCity: number) {
     if (this.memoryAction !== numberCity) {
       this.memoryAction = numberCity;
 
@@ -51,7 +51,7 @@ export class RightPanelComponent implements OnInit {
     }
   }
 
-  getIdOpen(i) {
+  getIdOpen(i: number) {
     this.IdOpen = i;
   }
 
