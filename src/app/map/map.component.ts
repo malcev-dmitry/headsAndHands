@@ -1,7 +1,7 @@
 import { Input, Component, OnInit } from '@angular/core';
 import { stations } from '../../assets/data/stations.js';
 import { iconsLocation } from '../../assets/data/iconsLocation.js';
-import { GetSortedDataService } from '../service/get-sorted-data.service.ts';
+import { GetSortedDataService } from '../service/get-sorted-data.service';
 import { data } from '../../assets/data/data.js';
 import * as _ from 'lodash';
 
@@ -23,13 +23,15 @@ export class MapComponent implements OnInit {
     }];
 
   markers: any;
-  constructor(private getData: GetSortedDataService) {}
+
+  constructor(private getSortedData: GetSortedDataService) {}
+
   icon = iconsLocation;
-  getData: (id: string) => any = _.memoize(this.getData.getSortedData);
-  sizeIcon = 2;
+  getData: (id: string) => any = _.memoize(this.getSortedData.getSortedData);
+  sizeIcon: number = 2;
   time: string[] = [];
 
-  sizeIconMetro(i) {
+  sizeIconMetro(i: number) {
     if (i === this.idOpen) {
       this.sizeIcon = 3;
     }
@@ -39,7 +41,7 @@ export class MapComponent implements OnInit {
     return this.sizeIcon;
   }
 
-  getIdOpen(i) {
+  getIdOpen(i: number) {
     if (i !== this.idOpen) {
       return false;
     }
