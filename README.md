@@ -1,5 +1,5 @@
 # headsAndHands
-How to connect a google maps on angular 2+
+How to connect a google maps on angular 7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.0-beta.3.
 
